@@ -1,0 +1,63 @@
+adrian@jarvis:~/bezpieczenstwo/aes-cbc-crack$ node testsha256.js ./data/crypto2.encoded 7395c1908721176b23c06d97d902cddb 263da3e84165eb15d6ef5715012318a0480011d95345677406ec53
+[ '/usr/local/bin/node',
+  '/home/adrian/bezpieczenstwo/aes-cbc-crack/testsha256.js',
+  './data/crypto2.encoded',
+  '7395c1908721176b23c06d97d902cddb',
+  '263da3e84165eb15d6ef5715012318a0480011d95345677406ec53' ]
+{ suffix:
+   <Buffer 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>,
+  workinghash:
+   <Buffer 00 00 00 00 00 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>,
+  iv: <Buffer 73 95 c1 90 87 21 17 6b 23 c0 6d 97 d9 02 cd db>,
+  encrypted:
+   '9D1YDqs9yqbM4ko467nO/yFhvThbn8GN8agwaFcyT11RDuDGDWkkvzA/zgQCzvyOvPP0K8FFTEc4/VYSkIz1rg==',
+  lastPrefix:
+   <Buffer ff ff ff ff ff 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53> }
+FOUND inni
+<Buffer 00 00 29 7f 43 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>
+I.)y}UTex S inni
+
+
+FOUND film
+<Buffer 00 01 83 68 7a 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>
+film Pr [~SQg71bwZ*
+
+
+FOUND afar
+<Buffer 00 01 a0 39 33 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>
+WFzF/}v`#8357fZ2 afar
+
+
+FOUND panu
+<Buffer 00 02 7f 72 20 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>
+75n+`zv_%<,(o$e, panu
+
+
+FOUND make
+<Buffer 00 02 84 f4 46 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>
+1{#V8&#fA,|g1W make
+
+
+FOUND That
+<Buffer 00 03 11 43 64 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>
+That Tv:p6}QU9.%
+
+
+FOUND this
+<Buffer 00 04 27 5a e7 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>
+<4%l"UT@2~ this
+
+
+FOUND move
+<Buffer 00 04 e9 ce 57 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>
+0 move yM&gnxP
+
+
+FOUND wiec
+<Buffer 00 07 2a 57 b7 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>
+8j?Y[+i-Yn}z wiec
+
+
+FOUND also
+<Buffer 00 07 60 24 6c 26 3d a3 e8 41 65 eb 15 d6 ef 57 15 01 23 18 a0 48 00 11 d9 53 45 67 74 06 ec 53>
+also RZp%KcrWa_~SwY#of{

@@ -1,0 +1,98 @@
+adrian@jarvis:~/bezpieczenstwo/aes-cbc-crack$ node testsha256.js ./data/crypto3.encoded 3695f0d26543186d63346a332220d698 b191aebdeec7dec0e12375808dcd4639adabb3ff60474be623275d4
+[ '/usr/local/bin/node',
+  '/home/adrian/bezpieczenstwo/aes-cbc-crack/testsha256.js',
+  './data/crypto3.encoded',
+  '3695f0d26543186d63346a332220d698',
+  'b191aebdeec7dec0e12375808dcd4639adabb3ff60474be623275d4' ]
+{ suffix:
+   <Buffer 0b 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>,
+  workinghash:
+   <Buffer 00 00 00 00 0b 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>,
+  iv: <Buffer 36 95 f0 d2 65 43 18 6d 63 34 6a 33 22 20 d6 98>,
+  encrypted:
+   '0uLBeIZKmzb4L0uIefdWU8haNux/DlpfwpfTonI/VXURmp3nPKtjR9gEQbBVKmBVFo3/do/+F/9uN6XRpTmyxd/cBk97+VUm49EwF7Oi90SQ1b8EtOegvS+b09F50DLoCFyrLOzWnO76Bt92vl6LjXduJF/0hvIy06aSSWuoYdQsmSfEPEiDbtpabW4XAO+i\n',
+  lastPrefix:
+   <Buffer ff ff ff ff 0b 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4> }
+FOUND hear
+<Buffer 00 00 18 10 75 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+T|zXi,:uPBP:NwH('\c1)N&:GpqyK[J3{ hear
+
+
+FOUND What
+<Buffer 00 00 60 b2 3f 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+What \_ii*gh^Xs?#q&Jqb}0|I'*TaMN302EJP|QUbYQ4
+
+
+FOUND jego
+<Buffer 00 01 41 06 5f 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
++B<zwbz&bu jego "`CC^Z_=%&Km|UsK'rvq;??.b_V(u'[b%06+
+
+
+FOUND synu
+<Buffer 00 01 7d 79 e7 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+gAM\p9O"a=j5Kq-zYhM$^@7R=9JG(Je{Q^i\p9WC@ synu
+
+
+FOUND ball
+<Buffer 00 01 8a 38 06 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+ball %y55+oiC`}j[H~dNYD;DjP8"`$O_&gQ{'t)u?3F=_;jC
+
+
+FOUND view
+<Buffer 00 02 4f 38 40 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+view ~opNv?hq.l_Z@Jer6rimP&6AfeS&6%(PKtuR 6
+
+
+FOUND next
+<Buffer 00 02 88 e7 03 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+/D$WOQE<)7$O#~'Qn]qB?f;]2r+0MlGzJjH'!5[{|R next
+
+
+FOUND jake
+<Buffer 00 04 2a 02 67 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+w`?dN_005}<b!)gMO8"o]31Pq2= jake pQAD<:}O_30&v(c+?-
+
+
+FOUND page
+<Buffer 00 04 34 9a 07 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+page \Ka|frcS0W&^^16L|Ja1@gRm6TK{;CHMVe~?[s$m}=<'W!qC
+
+
+FOUND sama
+<Buffer 00 04 5e cd 70 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+sama &zvM+F5DRH>36PhVdf+DV[_\yF"]r+NNbN(',/*Yw^
+
+
+FOUND took
+<Buffer 00 04 6c a9 96 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+took ZcXClh3re&aPIP[%Dc4v4E0Bw<eU1H[I|iG)hNZ
+
+
+FOUND name
+<Buffer 00 04 95 0d be 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+name Is^p+/~cz;kIq`# _%%$vU{P9HjE @G{!_\uqVu&L,yw
+
+
+FOUND open
+<Buffer 00 04 fb 94 a5 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+h},tTXgXM^|B open d?D]7P"Y=+6y-`N||iHN$F"
+
+
+FOUND temu
+<Buffer 00 06 75 0f 58 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+yfh-.~q&(ikNnROvJ<do*#hVV{Z:,HTLaqh! temu
+
+
+FOUND rest
+<Buffer 00 06 ff 85 7a 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+rest 1X,hiR$@ir7}7=O}yEKs!P^.ofwy<Ao7,0yn!dY5q2F
+
+
+FOUND goes
+<Buffer 00 07 1b 6c 3a 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+goes gLrCGv lJL0Fz.+\7nAi(cG'02^KKGtmWW/ ^nm~;+C=6}u
+
+
+FOUND look
+<Buffer 00 07 a1 67 66 19 1a eb de ec 7d ec 0e 12 37 58 08 dc d4 63 9a da bb 3f f6 04 74 be 62 32 75 d4>
+look zI(ABK{=%M 5Wt'3CYk;WjEAJhwilZ;9~#Ef4'Zrwe

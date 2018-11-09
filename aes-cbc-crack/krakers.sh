@@ -1,0 +1,4 @@
+gnome-terminal -e "node ./testsha256.js ./data/crypto1.encoded 6e9a2cf8c64fa6e50da766f5c7586be1 47ae5607d9ff6a62a88341ea023c040aaa2d76017dc5213403fa2bc5 0 4"
+gnome-terminal -e "node ./testsha256.js ./data/crypto1.encoded 6e9a2cf8c64fa6e50da766f5c7586be1 47ae5607d9ff6a62a88341ea023c040aaa2d76017dc5213403fa2bc5 1 4"
+gnome-terminal -e "node ./testsha256.js ./data/crypto1.encoded 6e9a2cf8c64fa6e50da766f5c7586be1 47ae5607d9ff6a62a88341ea023c040aaa2d76017dc5213403fa2bc5 2 4"
+gnome-terminal -e "node ./testsha256.js ./data/crypto1.encoded 6e9a2cf8c64fa6e50da766f5c7586be1 47ae5607d9ff6a62a88341ea023c040aaa2d76017dc5213403fa2bc5 3 4"
