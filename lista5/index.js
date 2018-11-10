@@ -2,8 +2,8 @@ var fs = require('fs');
 var http = require('http');
 var https = require('https');
 var bodyParser = require('body-parser')
-var privateKey = fs.readFileSync('certificates/privkeyA.pem', 'utf8');
-var certificate = fs.readFileSync('certificates/certA.crt', 'utf8');
+var privateKey = fs.readFileSync('server_key.pem', 'utf8');
+var certificate = fs.readFileSync('server_crt.pem', 'utf8');
 
 var writeStream = fs.createWriteStream("credentials.txt", { encoding: 'utf8' });
 var credentials = { key: privateKey, cert: certificate };
