@@ -17,10 +17,14 @@ app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 
 // your express configuration here
+var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
-httpsServer.listen(8000);
 
+httpServer.listen(8080);
+console.log("HTTP is running")
+httpsServer.listen(8000);
 console.log("HTTPS is running")
+
 
 app.use(express.static(__dirname + "/static/"))
 

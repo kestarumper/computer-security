@@ -1,0 +1,6 @@
+HTTPS requires an initial handshake which can be very slow. The actual amount of data transferred as part of the handshake isn't huge (under 5 kB typically), but for very small requests, this can be quite a bit of overhead. However, once the handshake is done, a very fast form of symmetric encryption is used, so the overhead there is minimal. Bottom line: making lots of short requests over HTTPS will be quite a bit slower than HTTP, but if you transfer a lot of data in a single request, the difference will be insignificant.
+
+However, keepalive is the default behaviour in HTTP/1.1, so you will do a single handshake and then lots of requests over the same connection. This makes a significant difference for HTTPS. You should probably profile your site (as others have suggested) to make sure, but I suspect that the performance difference will not be noticeable.
+
+WNIOSEK:
+Przez "handshake" mamy duży overhead.
