@@ -18,7 +18,6 @@ passport.use(new Strategy(
     try {
       const result = await db.validateUser(email, password)
         .then((user) => {
-          console.log(user)
           if (!user) { return cb(null, false); }
           return cb(null, user);
         })
@@ -52,7 +51,7 @@ passport.deserializeUser(async function (id, cb) {
 });
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/user');
 var loginRouter = require('./routes/login');
 var registerRouter = require('./routes/register');
 
@@ -76,7 +75,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/user', usersRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 

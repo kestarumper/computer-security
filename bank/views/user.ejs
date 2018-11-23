@@ -1,0 +1,25 @@
+<%- include('header'); -%>
+  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Pole</th>
+      <th class="mdl-data-table__cell--non-numeric">Wartość</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Email</td>
+      <td><%= user.email %></td>
+    </tr>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Imię i Nazwisko</td>
+      <td><%= user.name %> <%= user.surname %></td>
+    </tr>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Piniondze</td>
+      <td>$<%= user.balance %></td>
+    </tr>
+  </tbody>
+</table>
+  <a href="/user/logout"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Logout</button></a>
+<%- include('footer'); -%>
