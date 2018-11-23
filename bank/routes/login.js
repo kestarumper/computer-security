@@ -18,7 +18,9 @@ router.get('/passrecover', function(req, res, next) {
 
 router.post('/passrecover', async function(req, res, next) {
   console.log(req.body)
-  const url = await forgotPassword(req.body.username);
+  const url = await forgotPassword(req.body.username).catch((err) => {
+    return next(err)
+  });
   res.send(`<a href="${url}">Twoje nowe hasło w mailu</a>`)
 });
 

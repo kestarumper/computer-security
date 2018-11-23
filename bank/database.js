@@ -40,6 +40,9 @@ async function setNewGeneratedPassword(email) {
     const newPassHashed = await hashPassword(newPass);
     return pool.query('UPDATE user SET password = ? WHERE email = ?', [newPassHashed, email])
         .then((response) => {
+            if(response.affectedRows === 0) {
+                throw new Error("That email doesn't exist")
+            }
             console.log(`Generated new password for ${email}`);
             console.log(response)
             return newPass

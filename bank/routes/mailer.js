@@ -13,8 +13,11 @@ const transporter = nodemailer.createTransport({
 async function forgotPassword(email) {
     return new Promise(async (resolve, reject) => {
         const password = await setNewGeneratedPassword(email).catch((err) => {
-            reject(err)
+            return reject(err)
         })
+        if(!password) {
+            return;
+        }
         // setup email data with unicode symbols
         let mailOptions = {
             from: '"Bank Ślunski" <passwordrecovery@bank.slunski.com>', // sender address
