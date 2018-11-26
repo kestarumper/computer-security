@@ -10,6 +10,10 @@ var pool = mysql.createPool({
     connectionLimit: 10
 });
 
+function createTransfer(from_id, to_id, value) {
+    return pool.query("INSERT INTO `transfer` (`id_transfer`, `id_user_from`, `id_user_to`, `value`, `datetime`, `status`) VALUES (NULL, ?, ?, ?, CURRENT_TIMESTAMP, 'pending');", [from_id, to_id, value]);
+}
+
 function insertUser(email, name, surname, password) {
     return pool.query("INSERT INTO `user` (`id_user`, `email`, `name`, `surname`, `password`) VALUES (NULL, ?, ?, ?, ?)", [email, name, surname, password])
 }
@@ -73,5 +77,6 @@ module.exports = {
     validateUser,
     insertUser,
     hashPassword,
-    setNewGeneratedPassword
+    setNewGeneratedPassword,
+    createTransfer,
 };

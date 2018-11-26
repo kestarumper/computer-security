@@ -6,7 +6,7 @@ const { forgotPassword } = require('./mailer')
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   if(req.user) {
-    res.redirect('/user')
+    return res.redirect('/user')
   }
   res.render('login', {title: "Login"});
 });
@@ -21,7 +21,11 @@ router.post('/passrecover', async function(req, res, next) {
   const url = await forgotPassword(req.body.username).catch((err) => {
     return next(err)
   });
-  res.send(`<a href="${url}">Twoje nowe hasło w mailu</a>`)
+  if(url) {
+    res.send(`<a href="${url}">Twoje nowe hasło w mailu</a>`)
+  } else {
+    res.sendStatus(500)
+  }
 });
 
 router.post('/',
