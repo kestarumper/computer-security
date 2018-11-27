@@ -70,7 +70,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(expressSession({ name: 'pierogizfarszem', secret: 'miernik geigera' }));
+app.use(expressSession({ name: 'pierogizfarszem', secret: 'miernik geigera', resave: false, saveUninitialized: false }));
 app.use(helmet())
 
 // Initialize Passport and restore authentication state, if any, from the
