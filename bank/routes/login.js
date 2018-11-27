@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport')
-const { forgotPassword } = require('./mailer')
+const { forgotPassword } = require('../controllers/mailer')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

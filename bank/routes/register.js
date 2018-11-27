@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var argon2 = require('argon2')
-var { insertUser, hashPassword } = require('../database')
-const { check, validationResult } = require('express-validator/check')
+const { renderRegister, handleRegistration } = require('../controllers/register')
+var { hashPassword } = require('../database')
+const { check } = require('express-validator/check')
 
 async function hashPasswordMiddleware(req, res, next) {
   const pwd = req.body.password;
@@ -29,10 +29,7 @@ function reportError(err, req, res, next) {
   next();
 }
 
-/* GET users listing. */
-router.get('/', function (req, res, next) {
-  res.render('register', { title: "Rejestracja" });
-});
+router.get('/', renderRegister);
 
 router.post('/', [
   check('email').escape().isEmail().normalizeEmail(),
@@ -44,16 +41,7 @@ router.post('/', [
   hashPasswordMiddleware,
   reportError,
 ],
-  async function (req, res, next) {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(422).json({ errors: errors.array() })
-    }
-    const { email, name, surname, password } = req.body
-    // res.json(req.body)
-    const response = await insertUser(email, name, surname, password)
-    res.redirect('/login')
-  }
+  handleRegistration
 )
 
 module.exports = router;

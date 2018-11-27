@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('promise-mysql');
-var { findUserById, createTransfer, getUserTransfers } = require('../database')
+const { renderUserPage } = require('../controllers/user')
+const { renderNewTransfer, renderTransferList, renderTransferConfirm, renderTransferExecute } = require('../controllers/transfer')
 
 function logout(req, res, next) {
   req.session.destroy(function (err) {
@@ -24,52 +25,15 @@ function checkIfLogged(req, res, next) {
 router.use(checkIfLogged);
 
 /* GET users listing. */
-router.get('/', async function (req, res, next) {
-  const user = req.user
-  res.render('user', { title: "Moje konto", user })
-});
+router.get('/', renderUserPage);
 
-/* GET users listing. */
-router.get('/transfer', function (req, res, next) {
-  res.render('transfer', { title: "Nowy przelew" });
-});
+router.get('/transfer', renderNewTransfer);
 
-router.get('/transfer/list', async function (req, res, next) {
-  const transfers = await getUserTransfers(req.user.id)
-  res.render('transfer_list', { title: "Nowy przelew", transfers });
-});
+router.get('/transfer/list', renderTransferList);
 
-router.post('/transfer/confirm', function (req, res, next) {
-  const { iban, money } = req.body
-  if(!iban || !money) {
-    return next(new Error("Brak wymaganych danych."))
-  }
-  res.render('transfer_confirm', {
-    title: "Potwierdź przelew",
-    confirm: {
-      to_id: iban,
-      money: money
-    }
-  })
-})
+router.post('/transfer/confirm', renderTransferConfirm)
 
-router.post('/transfer/execute', async function (req, res, next) {
-  const { iban, money } = req.body
-  const user = req.user;
-  const response = await createTransfer(user.id, iban, money).catch((err) => {
-    console.error(err)
-    return next(new Error("Błędne dane. Przelew nie został wykonany"))
-  });
-  if(response) {
-    res.render('transfer_execute', {
-      title: "Serwer otrzymał przelew",
-      confirm: {
-        to_id: iban,
-        money: money
-      }
-    })
-  }
-})
+router.post('/transfer/execute', renderTransferExecute)
 
 router.get('/logout', logout)
 
