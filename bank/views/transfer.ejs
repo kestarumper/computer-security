@@ -7,6 +7,7 @@
         </div>
         <div class="mdl-card__supporting-text">
           <form id="transferform" action="/user/transfer/confirm" method="POST">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
               <div class="mdl-textfield mdl-js-textfield">
                   <input class="mdl-textfield__input" type="text" id="iban" name="iban" />
                   <label class="mdl-textfield__label" for="iban">Numer IBAN</label>

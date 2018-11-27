@@ -15,6 +15,7 @@
                 <label class="mdl-textfield__label" for="money">Pieniążki</label>
             </div>
           <form id="confirmform" action="/user/transfer/execute" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <input class="mdl-textfield__input" type="hidden" id="iban" name="iban" value="<%= confirm.to_id %>"/>
             <input class="mdl-textfield__input" type="hidden" id="money" name="money" value="<%= confirm.money %>"/>
           </form>

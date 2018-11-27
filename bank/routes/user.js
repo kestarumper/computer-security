@@ -1,8 +1,10 @@
-var express = require('express');
-var router = express.Router();
-var mysql = require('promise-mysql');
+const express = require('express');
+const router = express.Router();
+const csrf = require('csurf')
 const { renderUserPage } = require('../controllers/user')
 const { renderNewTransfer, renderTransferList, renderTransferConfirm, renderTransferExecute } = require('../controllers/transfer')
+
+const csrfProtection = csrf();
 
 function logout(req, res, next) {
   req.session.destroy(function (err) {
@@ -26,16 +28,13 @@ router.use(checkIfLogged);
 
 /* GET users listing. */
 router.get('/', renderUserPage);
-
-router.get('/transfer', renderNewTransfer);
-
+router.get('/logout', logout)
 router.get('/transfer/list', renderTransferList);
 
-router.post('/transfer/confirm', renderTransferConfirm)
+router.get('/transfer', csrfProtection, renderNewTransfer);
+router.post('/transfer/confirm', csrfProtection, renderTransferConfirm)
+router.post('/transfer/execute', csrfProtection, renderTransferExecute)
 
-router.post('/transfer/execute', renderTransferExecute)
-
-router.get('/logout', logout)
 
 
 module.exports = router;
