@@ -1,0 +1,32 @@
+<%- include('header'); -%>
+  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Od</th>
+      <th class="mdl-data-table__cell--non-numeric">Do</th>
+      <th class="mdl-data-table__cell--non-numeric">Wartość</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% transfers.forEach((transfer) => { %>
+        <tr>
+            <td>
+              <pre>
+                <%= transfer.fromname %>
+                <%= transfer.from %>
+              </pre>
+            </td>
+            <td>
+              <pre>
+                <%= transfer.toname %>
+                <%= transfer.to %>
+              </pre>
+            </td>
+            <td><%= transfer.value %></td>
+        </tr>
+    <% }) %>
+  </tbody>
+</table>
+  <a href="/user"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Powrót</button></a>
+  <a href="/user/transfer"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Nowy przelew</button></a>
+<%- include('footer'); -%>

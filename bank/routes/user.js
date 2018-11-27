@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('promise-mysql');
-var { findUserById, createTransfer } = require('../database')
+var { findUserById, createTransfer, getUserTransfers } = require('../database')
 
 function logout(req, res, next) {
   req.session.destroy(function (err) {
@@ -32,6 +32,11 @@ router.get('/', async function (req, res, next) {
 /* GET users listing. */
 router.get('/transfer', function (req, res, next) {
   res.render('transfer', { title: "Nowy przelew" });
+});
+
+router.get('/transfer/list', async function (req, res, next) {
+  const transfers = await getUserTransfers(req.user.id)
+  res.render('transfer_list', { title: "Nowy przelew", transfers });
 });
 
 router.post('/transfer/confirm', function (req, res, next) {
