@@ -1,11 +1,14 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var passport = require('passport');
-var Strategy = require('passport-local').Strategy;
-var db = require('./database')
+const createError = require('http-errors');
+const express = require('express');
+const expressSession = require('express-session')
+const bodyParser = require('body-parser')
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const passport = require('passport');
+const Strategy = require('passport-local').Strategy;
+const db = require('./database')
+const helmet = require('helmet')
 
 // Configure the local strategy for use by Passport.
 //
@@ -50,12 +53,12 @@ passport.deserializeUser(async function (id, cb) {
   return result;
 });
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/user');
-var loginRouter = require('./routes/login');
-var registerRouter = require('./routes/register');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/user');
+const loginRouter = require('./routes/login');
+const registerRouter = require('./routes/register');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -66,8 +69,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('body-parser').urlencoded({ extended: true }));
-app.use(require('express-session')({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(expressSession({ name: 'pierogizfarszem', secret: 'miernik geigera' }));
+app.use(helmet())
 
 // Initialize Passport and restore authentication state, if any, from the
 // session.
