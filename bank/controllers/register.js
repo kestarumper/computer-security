@@ -1,4 +1,5 @@
 const { validationResult } = require('express-validator/check')
+const { insertUser } = require('../database')
 
 function renderRegister(req, res, next) {
     res.render('register', { title: "Rejestracja" });

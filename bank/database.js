@@ -11,7 +11,7 @@ var pool = mysql.createPool({
 });
 
 function getUserTransfers(id) {
-    return pool.query("SELECT CONCAT(user1.name, ' ', user1.surname) AS fromname, CONCAT(user2.name, ' ', user2.surname) AS toname, id_user_from AS `from`, id_user_to AS `to`, value FROM ((transfer JOIN user AS user1 ON transfer.id_user_from = user1.id_user) JOIN user AS user2 ON transfer.id_user_to = user2.id_user) WHERE id_user_from = 6 OR id_user_to = 6", [id, id])
+    return pool.query("SELECT CONCAT(user1.name, ' ', user1.surname) AS fromname, CONCAT(user2.name, ' ', user2.surname) AS toname, id_user_from AS `from`, id_user_to AS `to`, value FROM ((transfer JOIN user AS user1 ON transfer.id_user_from = user1.id_user) JOIN user AS user2 ON transfer.id_user_to = user2.id_user) WHERE id_user_from = ? OR id_user_to = ?", [id, id])
 }
 
 function createTransfer(from_id, to_id, value) {
