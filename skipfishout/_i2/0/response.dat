@@ -1,0 +1,38 @@
+HTTP/1.1 200 Partial Content
+X-Powered-By: Express
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Thu, 22 Nov 2018 09:58:21 GMT
+ETag: W/"119-1673adb2ac0"
+Content-Type: text/css; charset=UTF-8
+Content-Range: bytes 0-280/281
+Content-Length: 281
+Date: Sun, 09 Dec 2018 17:03:35 GMT
+Connection: keep-alive
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.mdl-layout {
+	align-items: center;
+  justify-content: center;
+}
+.mdl-layout__content {
+	padding: 24px;
+	flex: none;
+}
+
+.registerform {
+  width: 50em;
+}
+vw
+

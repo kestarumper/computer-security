@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+X-DNS-Prefetch-Control: off
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Content-Type: text/html; charset=utf-8
+Content-Length: 1384
+ETag: W/"568-GbobBeK+tXC3svwwH8Okoe7jQcA"
+Date: Sun, 09 Dec 2018 20:47:07 GMT
+Connection: keep-alive
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Odzyskiwanie Hasła
+  </title>
+  <!--
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-amber.min.css"

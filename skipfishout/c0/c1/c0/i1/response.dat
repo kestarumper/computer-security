@@ -1,0 +1,14 @@
+HTTP/1.1 422 Unprocessable Entity
+X-DNS-Prefetch-Control: off
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Content-Type: application/json; charset=utf-8
+Content-Length: 246
+ETag: W/"f6-LxvHfEzGBF+BymzBtEcqlv2XsKc"
+Date: Sun, 09 Dec 2018 17:03:35 GMT
+Connection: keep-alive
+
+{"errors":[{"location":"body","param":"name","msg":"Invalid value"},{"location":"body","param":"name","msg":"Invalid value"},{"location":"body","param":"surname","msg":"Invalid value"},{"location":"body","param":"surname","msg":"Invalid value"}]}Ê

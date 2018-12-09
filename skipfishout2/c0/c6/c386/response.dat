@@ -1,0 +1,15 @@
+HTTP/1.1 302 Found
+X-DNS-Prefetch-Control: off
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Location: /login
+Vary: Accept
+Content-Type: text/plain; charset=utf-8
+Content-Length: 28
+Date: Sun, 09 Dec 2018 20:36:56 GMT
+Connection: keep-alive
+
+Found. Redirecting to /login

@@ -1,0 +1,8 @@
+GET http://localhost:3000/ name=http://localhost:3000/ type=serv linked=yes browsers=0 browser_used=FAST dup=0 code=302 len=28 notes=7 sig=0x723cc2e3
+GET http://localhost:3000/login/ name=login type=dir linked=yes browsers=0 browser_used=FAST dup=0 code=302 len=27 notes=1 sig=0x6b5ffc86
+GET http://localhost:3000/register/ name=register type=dir linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=2575 notes=3 sig=0xf6436c08
+POST http://localhost:3000/register DATA:email=skipfish@example.com&password=skipfish&repassword=skipfish name=email type=param linked=yes browsers=0 browser_used=FAST dup=0 code=422 len=246 notes=2 sig=0x800dd61
+POST http://localhost:3000/register DATA:email=skipfish@example.com&password=skipfish&repassword=skipfish name=password type=param linked=yes browsers=0 browser_used=FAST dup=0 code=422 len=246 notes=1 sig=0xffbed75f
+POST http://localhost:3000/register DATA:email=skipfish@example.com&password=skipfish&repassword=skipfish name=repassword type=param linked=yes browsers=0 browser_used=FAST dup=0 code=422 len=246 notes=1 sig=0xffbed75f
+GET http://localhost:3000/stylesheets/ name=stylesheets type=dir linked=yes browsers=0 browser_used=FAST dup=0 returns_404 code=404 len=1721 notes=0 sig=0x9b9908d
+GET http://localhost:3000/stylesheets/style.css name=style.css type=file linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=281 notes=1 sig=0x7bd78051

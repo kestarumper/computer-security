@@ -1,0 +1,14 @@
+HTTP/1.1 422 Unprocessable Entity
+X-DNS-Prefetch-Control: off
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Content-Type: application/json; charset=utf-8
+Content-Length: 364
+ETag: W/"16c-+GFmvd9byo8dvP6W2tTNkmnenZc"
+Date: Sun, 09 Dec 2018 19:08:42 GMT
+Connection: keep-alive
+
+{"errors":[{"location":"body","param":"email","value":"skipfish@example.com-->\">'>'\"<sfi000015v774032>","msg":"Invalid value"},{"location":"body","param":"name","msg":"Invalid value"},{"location":"body","param":"name","msg":"Invalid value"},{"location":"body","param":"surname","msg":"Invalid value"},{"location":"body","param":"surname","msg":"Invalid value"}]}

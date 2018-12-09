@@ -1,0 +1,10 @@
+GET /user/transfer/welcome HTTP/1.1
+Host: localhost:3000
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Accept: skip/fish;
+Cookie: pierogizfarszem=s%3Ap5A5AcBgy2QN42ODwb8o4JpCrk9BrKpX.H7YGc6j1sF74zSt%2FdF8BSufr84rQg8r%2BWCs8ba%2BvbDM
+
