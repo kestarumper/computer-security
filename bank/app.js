@@ -8,7 +8,7 @@ const logger = require('morgan');
 const passport = require('passport');
 const Strategy = require('passport-local').Strategy;
 const db = require('./database')
-const helmet = require('helmet')
+// const helmet = require('helmet')
 
 // Configure the local strategy for use by Passport.
 //
@@ -71,7 +71,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressSession({ name: 'pierogizfarszem', secret: 'miernik geigera', resave: false, saveUninitialized: false }));
-app.use(helmet())
+// app.use(helmet())
  
 // Initialize Passport and restore authentication state, if any, from the
 // session.
