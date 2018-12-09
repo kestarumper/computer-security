@@ -3,6 +3,7 @@ const router = express.Router();
 const csrf = require('csurf')
 const { renderUserPage } = require('../controllers/user')
 const { renderNewTransfer, renderTransferList, renderTransferConfirm, renderTransferExecute } = require('../controllers/transfer')
+const { acceptTransfer, rejectTransfer } = require('../controllers/admin')
 
 const csrfProtection = csrf();
 
@@ -24,6 +25,14 @@ function checkIfLogged(req, res, next) {
   }
 }
 
+function checkIfAdmin(req, res, next) {
+  if (req.user.type !== 'admin') {
+    return res.redirect('/user')
+  } else {
+    next()
+  }
+}
+
 router.use(checkIfLogged);
 
 /* GET users listing. */
@@ -34,6 +43,9 @@ router.get('/transfer/list', renderTransferList);
 router.get('/transfer', csrfProtection, renderNewTransfer);
 router.post('/transfer/confirm', csrfProtection, renderTransferConfirm)
 router.post('/transfer/execute', csrfProtection, renderTransferExecute)
+
+router.get('/admin/transfer/accept/:id', checkIfLogged, checkIfAdmin, acceptTransfer)
+router.get('/admin/transfer/reject/:id', checkIfLogged, checkIfAdmin, rejectTransfer)
 
 
 

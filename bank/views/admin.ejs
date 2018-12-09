@@ -1,0 +1,16 @@
+<%- include('header'); -%>
+  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <tbody>
+    <% for(var t of transfers) { %>
+        <tr>
+            <% for(var node in t) { %>
+            <td><%- t[node] %></td>
+            <% } %>
+            <td><a href="/user/admin/transfer/accept/<%= t.id_transfer %>">ACCEPT</a></td>
+            <td><a href="/user/admin/transfer/reject/<%= t.id_transfer %>">REJECT</a></td>
+        </tr>
+    <% } %>
+  </tbody>
+</table>
+  <a href="/user/logout"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Logout</button></a>
+<%- include('footer'); -%>

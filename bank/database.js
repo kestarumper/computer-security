@@ -10,6 +10,16 @@ var pool = mysql.createPool({
     connectionLimit: 10
 });
 
+const ADMIN_TOOLS = {
+    getAllTransfers: function() {
+        return pool.query("SELECT id_transfer, status, CONCAT(user1.name, ' ', user1.surname) AS fromname, CONCAT(user2.name, ' ', user2.surname) AS toname, id_user_from AS `from`, id_user_to AS `to`, value FROM ((transfer JOIN user AS user1 ON transfer.id_user_from = user1.id_user) JOIN user AS user2 ON transfer.id_user_to = user2.id_user)")
+    },
+
+    markTransferAs: function(id, status = 'accepted') {
+        return pool.query("UPDATE transfer SET status = ? WHERE id_transfer = ?", [status, id])
+    }
+}
+
 function getUserTransfers(id) {
     return pool.query("SELECT CONCAT(user1.name, ' ', user1.surname) AS fromname, CONCAT(user2.name, ' ', user2.surname) AS toname, id_user_from AS `from`, id_user_to AS `to`, value FROM ((transfer JOIN user AS user1 ON transfer.id_user_from = user1.id_user) JOIN user AS user2 ON transfer.id_user_to = user2.id_user) WHERE id_user_from = ? OR id_user_to = ?", [id, id])
 }
@@ -83,5 +93,6 @@ module.exports = {
     hashPassword,
     setNewGeneratedPassword,
     createTransfer,
-    getUserTransfers
+    getUserTransfers,
+    ADMIN_TOOLS
 };
