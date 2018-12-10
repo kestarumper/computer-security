@@ -9,19 +9,19 @@
   <tbody>
     <tr>
       <th class="mdl-data-table__cell--non-numeric">Numer Konta</td>
-      <td><%= user.id %></td>
+      <td><%- user.id %></td>
     </tr>
     <tr>
       <th class="mdl-data-table__cell--non-numeric">Email</td>
-      <td><%= user.email %></td>
+      <td><%- user.email %></td>
     </tr>
     <tr>
       <th class="mdl-data-table__cell--non-numeric">Imię i Nazwisko</td>
-      <td><%= user.name %> <%= user.surname %></td>
+      <td><%- user.name %> <%- user.surname %></td>
     </tr>
     <tr>
       <th class="mdl-data-table__cell--non-numeric">Piniondze</td>
-      <td>$<%= user.balance %></td>
+      <td>$<%- user.balance %></td>
     </tr>
   </tbody>
 </table>
