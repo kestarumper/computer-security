@@ -37,7 +37,7 @@ router.use(checkIfLogged);
 
 /* GET users listing. */
 router.get('/', renderUserPage);
-router.get('/logout', logout)
+// router.get('/logout', logout)
 router.get('/transfer/list', renderTransferList);
 
 router.get('/transfer', renderNewTransfer);

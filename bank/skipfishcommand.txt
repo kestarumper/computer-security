@@ -1,0 +1,6 @@
+skipfish -C pierogizfarszem=s%3ArbQrd8hbzmfep-obGaAXoU738mQ3fU27.pfsiqngaH6W21HtEB6hkRmhCq5aAkMo2iG%2BnGh1i6Wg \
+            --auth-verify-url http://localhost:3000/user \
+            -S /usr/share/skipfish/dictionaries/complete.wl \
+            -X http://localhost:3000/user/logout \
+            -o skipfishout3 \
+            http://localhost:3000
