@@ -32,11 +32,11 @@ function reportError(err, req, res, next) {
 router.get('/', renderRegister);
 
 router.post('/', [
-  check('email').escape().isEmail().normalizeEmail(),
-  check('name').escape().not().isEmpty().isString(),
-  check('surname').escape().not().isEmpty().isString(),
-  check('password').escape().not().isEmpty(),
-  check('repassword').escape().not().isEmpty(),
+  // check('email').escape().isEmail().normalizeEmail(),
+  // check('name').escape().not().isEmpty().isString(),
+  // check('surname').escape().not().isEmpty().isString(),
+  // check('password').escape().not().isEmpty(),
+  // check('repassword').escape().not().isEmpty(),
   pwdAndRePwdMatch,
   hashPasswordMiddleware,
   reportError,
