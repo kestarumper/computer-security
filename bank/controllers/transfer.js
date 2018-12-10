@@ -1,7 +1,12 @@
 var { createTransfer, getUserTransfers } = require('../database')
 
 function renderNewTransfer(req, res, next) {
-    res.render('transfer', { title: "Nowy przelew", csrfToken: req.csrfToken() });
+    res.render('transfer', 
+        { 
+            title: "Nowy przelew", 
+            csrfToken: "" 
+            // csrfToken: req.csrfToken() 
+        });
 }
 
 function renderTransferConfirm(req, res, next) {
@@ -11,7 +16,8 @@ function renderTransferConfirm(req, res, next) {
     }
     res.render('transfer_confirm', {
         title: "Potwierdź przelew",
-        csrfToken: req.csrfToken(),
+        csrfToken: "",
+        // csrfToken: req.csrfToken(),
         confirm: {
             to_id: iban,
             money: money

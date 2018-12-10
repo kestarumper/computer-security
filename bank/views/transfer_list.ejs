@@ -12,17 +12,17 @@
         <tr>
             <td>
               <pre>
-                <%= transfer.fromname %>
-                <%= transfer.from %>
+                <%- transfer.fromname %>
+                <%- transfer.from %>
               </pre>
             </td>
             <td>
               <pre>
-                <%= transfer.toname %>
-                <%= transfer.to %>
+                <%- transfer.toname %>
+                <%- transfer.to %>
               </pre>
             </td>
-            <td><%= transfer.value %></td>
+            <td><%- transfer.value %></td>
         </tr>
     <% }) %>
   </tbody>
