@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator/check')
-const { insertUser } = require('../database')
+const { insertUser, hashPassword } = require('../database')
 
 function renderRegister(req, res, next) {
     res.render('register', { title: "Rejestracja" });
@@ -11,6 +11,7 @@ async function handleRegistration(req, res, next) {
       return res.status(422).json({ errors: errors.array() })
     }
     const { email, name, surname, password } = req.body
+    password = await hashPassword(password)
     const response = await insertUser(email, name, surname, password).catch((err) => {
         return next(new Error('Error '))
     })

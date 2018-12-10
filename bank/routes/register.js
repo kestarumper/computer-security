@@ -38,7 +38,7 @@ router.post('/', [
   // check('password').escape().not().isEmpty(),
   // check('repassword').escape().not().isEmpty(),
   pwdAndRePwdMatch,
-  hashPasswordMiddleware,
+  // hashPasswordMiddleware,
   reportError,
 ],
   handleRegistration
