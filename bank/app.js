@@ -18,6 +18,7 @@ const helmet = require('helmet')
 // will be set at `req.user` in route handlers after authentication.
 passport.use(new Strategy(
   async function (email, password, cb) {
+    // console.log(email, password)
     try {
       const result = await db.validateUser(email, password)
         .then((user) => {
@@ -56,6 +57,7 @@ passport.deserializeUser(async function (id, cb) {
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/user');
 const loginRouter = require('./routes/login');
+const apiRouter = require('./routes/api/api');
 const registerRouter = require('./routes/register');
 
 const app = express();
@@ -82,6 +84,7 @@ app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
