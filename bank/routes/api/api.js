@@ -4,7 +4,10 @@ const passport = require('passport');
 const api = require('../../controllers/api')
 
 router.use(function(req, res, next) {
-    console.log(req.get('authorization'))
+    const authHeader = req.get('authorization');
+    if(authHeader) {
+        console.log(authHeader)
+    }
     next()
 })
 

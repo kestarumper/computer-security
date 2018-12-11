@@ -1,3 +1,4 @@
+require('dotenv').config()
 const createError = require('http-errors');
 const express = require('express');
 const expressSession = require('express-session')
@@ -14,12 +15,11 @@ const helmet = require('helmet')
 
 const JWT_OPTS = {}
 JWT_OPTS.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
-JWT_OPTS.secretOrKey = 'adasamoloty';
-// JWT_OPTS.issuer = 'ironbank@braavos.com';
-// JWT_OPTS.audience = 'ironbankofbraavos';
+JWT_OPTS.secretOrKey = process.env.JWT_SECRET;
+JWT_OPTS.issuer = process.env.JWT_ISSUER;
+JWT_OPTS.audience = process.env.JWT_AUDIENCE;
 passport.use(new JwtStrategy(JWT_OPTS,
   async function (jwt_payload, cb) {
-    console.log(`User logged using JWT: ${jwt_payload}`)
     try {
       const userId = jwt_payload.id;
       const result = await db.findUserById(userId)
