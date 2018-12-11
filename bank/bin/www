@@ -20,11 +20,14 @@ app.set('port', port);
 /**
  * Create HTTPS server.
  */
-const credentials = {
+const options = {
   cert: fs.readFileSync('bin/certificates/server_crt.pem'),
   key: fs.readFileSync('bin/certificates/server_key.pem'),
+  ca: fs.readFileSync('bin/certificates/cacert.pem'),
+  rejectUnauthorized: true,
+  requestCert: true
 };
-var server = https.createServer(credentials, app);
+var server = https.createServer(options, app);
 
 /**
  * Listen on provided port, on all network interfaces.
