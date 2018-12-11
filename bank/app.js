@@ -7,8 +7,32 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const passport = require('passport');
 const Strategy = require('passport-local').Strategy;
+const JwtStrategy = require('passport-jwt').Strategy;
+const ExtractJwt = require('passport-jwt').ExtractJwt;
 const db = require('./database')
 const helmet = require('helmet')
+
+const JWT_OPTS = {}
+JWT_OPTS.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
+JWT_OPTS.secretOrKey = 'adasamoloty';
+// JWT_OPTS.issuer = 'ironbank@braavos.com';
+// JWT_OPTS.audience = 'ironbankofbraavos';
+passport.use(new JwtStrategy(JWT_OPTS,
+  async function (jwt_payload, cb) {
+    console.log(`User logged using JWT: ${jwt_payload}`)
+    try {
+      const userId = jwt_payload.id;
+      const result = await db.findUserById(userId)
+        .then((user) => {
+          if (!user) { return cb(null, false); }
+          return cb(null, user);
+        })
+    } catch (err) {
+      console.error(err)
+      return cb(err)
+    }
+  })
+);
 
 // Configure the local strategy for use by Passport.
 //
@@ -29,7 +53,7 @@ passport.use(new Strategy(
       console.error(err)
       return cb(err)
     }
-}));
+  }));
 
 
 // Configure Passport authenticated session persistence.
@@ -74,7 +98,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressSession({ name: 'pierogizfarszem', secret: 'miernik geigera', resave: false, saveUninitialized: false }));
 app.use(helmet())
- 
+
 // Initialize Passport and restore authentication state, if any, from the
 // session.
 app.use(passport.initialize());

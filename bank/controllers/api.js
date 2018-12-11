@@ -24,7 +24,7 @@ function requestJWTusingLocal(req, res, next) {
         if(err) { return next(err); }
         if(!user) { return res.sendStatus(401); }
         const jwt = await generateJWTfromPayload({ id: user.id });
-        res.json(jwt)
+        res.send(jwt)
     })(req, res, next);
 }
 
