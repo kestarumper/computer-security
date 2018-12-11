@@ -3,7 +3,8 @@ const JWT = require('jsonwebtoken');
 
 const JWT_SECRET = "adasamoloty"
 const JWT_OPTIONS = {
-    algorithm: 'HS256'
+    algorithm: 'HS256',
+    expiresIn: '1h'
 }
 
 function generateJWTfromPayload(payload) {
