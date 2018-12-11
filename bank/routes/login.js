@@ -26,7 +26,7 @@ router.post('/passrecover', async function(req, res, next) {
   } else {
     res.sendStatus(500)
   }
-});
+}); 
 
 router.post('/',
   passport.authenticate('local', {failureRedirect: '/login'}),

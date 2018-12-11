@@ -1,0 +1,22 @@
+GET http://localhost:3000/ name=http://localhost:3000/ type=serv linked=yes browsers=0 browser_used=FAST dup=0 code=302 len=28 notes=5 sig=0xcb61b099
+GET http://localhost:3000/login/ name=login type=dir linked=yes browsers=6 browser_used=FAST dup=0 code=302 len=27 notes=1 sig=0x6b5ffc86
+GET http://localhost:3000/login/ name=login type=dir linked=yes browsers=4 browser_used=FFOX dup=1 code=302 len=27 notes=1 sig=0x6b5ffc86
+GET http://localhost:3000/login/ name=login type=dir linked=yes browsers=2 browser_used=PHONE dup=1 code=302 len=27 notes=1 sig=0x6b5ffc86
+GET http://localhost:3000/register/ name=register type=dir linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=2588 notes=3 sig=0xf6436c08
+POST http://localhost:3000/register DATA:email=skipfish@example.com&password=skipfish&repassword=skipfish name=email type=param linked=yes browsers=0 browser_used=FAST dup=0 code=302 len=28 notes=2 sig=0x421ae3
+POST http://localhost:3000/register DATA:email=skipfish@example.com&password=skipfish&repassword=skipfish name=password type=param linked=yes browsers=0 browser_used=FAST dup=0 code=302 len=28 notes=1 sig=0x6b1bfc86
+POST http://localhost:3000/register DATA:email=skipfish@example.com&password=skipfish&repassword=skipfish name=repassword type=param linked=yes browsers=0 browser_used=FAST dup=0 code=302 len=28 notes=1 sig=0x6b1bfc86
+GET http://localhost:3000/stylesheets/ name=stylesheets type=dir linked=yes browsers=0 browser_used=FAST dup=0 returns_404 code=404 len=1721 notes=0 sig=0x9b9908d
+GET http://localhost:3000/stylesheets/style.css name=style.css type=file linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=281 notes=1 sig=0x7bd78051
+GET http://localhost:3000/user/ name=user type=dir linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=1553 notes=3 sig=0x109a2ed7
+GET http://localhost:3000/user/transfer/ name=transfer type=dir linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=1699 notes=4 sig=0x90b5012c
+GET http://localhost:3000/user/transfer/list/ name=list type=dir linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=1009 notes=3 sig=0xc63783b2
+GET http://localhost:3000/user/transfer/confirm name=confirm type=unknown linked=yes browsers=0 browser_used=FAST dup=0 returns_404 code=404 len=1666 notes=0 sig=0x63281c1
+POST http://localhost:3000/user/transfer/confirm DATA:_csrf=&iban=1&money=1 name=_csrf type=param linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=1875 notes=4 sig=0x31c94bb1
+POST http://localhost:3000/user/transfer/confirm DATA:_csrf=&iban=1&money=1 name=iban type=param linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=1875 notes=6 sig=0x31ccc943
+POST http://localhost:3000/user/transfer/confirm DATA:_csrf=&iban=1&money=1 name=money type=param linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=1875 notes=6 sig=0x31ccc943
+GET http://localhost:3000/user/transfer/execute name=execute type=unknown linked=yes browsers=0 browser_used=FAST not_fetched
+POST http://localhost:3000/user/transfer/execute DATA:_csrf=&iban=1&money=1 name=_csrf type=param linked=yes browsers=0 browser_used=FAST not_fetched
+POST http://localhost:3000/user/transfer/execute DATA:_csrf=&iban=1&money=1 name=iban type=param linked=yes browsers=0 browser_used=FAST not_fetched
+POST http://localhost:3000/user/transfer/execute DATA:_csrf=&iban=1&money=1 name=money type=param linked=yes browsers=0 browser_used=FAST not_fetched
+GET http://localhost:3000/images name=images type=file linked=yes browsers=0 browser_used=FAST dup=0 code=301 len=179 notes=0 sig=0xfff7ffff

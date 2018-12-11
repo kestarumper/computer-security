@@ -1,0 +1,28 @@
+HTTP/1.1 500 Internal Server Error
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 1761
+ETag: W/"6e1-nafaeiIAaq03NR3YYpTROAVxJRg"
+Date: Mon, 10 Dec 2018 13:55:02 GMT
+Connection: keep-alive
+
+<h1>Brak wymaganych danych.</h1>
+<h2></h2>
+<pre>Error: Brak wymaganych danych.
+    at renderTransferConfirm (/home/adrian/computer-security/bank/controllers/transfer.js:15:21)
+    at Layer.handle [as handle_request] (/home/adrian/computer-security/bank/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/adrian/computer-security/bank/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/adrian/computer-security/bank/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/adrian/computer-security/bank/node_modules/express/lib/router/layer.js:95:5)
+    at /home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:275:10)
+    at checkIfLogged (/home/adrian/computer-security/bank/routes/user.js:24:5)
+    at Layer.handle [as handle_request] (/home/adrian/computer-security/bank/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:317:13)
+    at /home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:174:3)
+    at router (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:47:12)</pre>
+x1

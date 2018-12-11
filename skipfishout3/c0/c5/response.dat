@@ -1,0 +1,52 @@
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 1553
+ETag: W/"611-CvFSd7fPxURWNXutYd9Itl+Nvmw"
+Date: Mon, 10 Dec 2018 12:49:46 GMT
+Connection: keep-alive
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Moje konto
+  </title>
+  <!--
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-amber.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  -->
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Pole</th>
+      <th class="mdl-data-table__cell--non-numeric">Wartość</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Numer Konta</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Email</td>
+      <td>skipfish@gmail.com</td>
+    </tr>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Imię i Nazwisko</td>
+      <td>Skipfish SkipFishowski</td>
+    </tr>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Piniondze</td>
+      <td>$2000</td>
+    </tr>
+  </tbody>
+</table>
+  <a href="/user/logout"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Logout</button></a>
+  <a href="/user/transfer"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Nowy przelew</button></a>
+  <a href="/user/transfer/list"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Lista przelewów</button></a>
+</body>
+</html>

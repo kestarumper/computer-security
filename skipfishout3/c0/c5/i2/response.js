@@ -1,0 +1,1 @@
+var res = {'data':'HTTP/1.1 302 Found\x0aX-Powered-By: Express\x0aLocation: /login\x0aVary: Accept\x0aContent-Type: text/plain; charset=utf-8\x0aContent-Length: 28\x0aDate: Mon, 10 Dec 2018 12:49:54 GMT\x0aConnection: keep-alive\x0a\x0aFound. Redirecting to /login\xb3%uU'}

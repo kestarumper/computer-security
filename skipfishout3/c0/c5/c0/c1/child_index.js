@@ -1,0 +1,5 @@
+var child = [
+  { 'dupe': false, 'type': 64, 'name': '_csrf=', 'dir': 'c0', 'linked': 5, 'url': 'http://localhost:3000/user/transfer/confirm DATA:_csrf=&iban=1&money=1', 'fetched': true, 'code': 200, 'len': 1875, 'decl_mime': 'text/html', 'sniff_mime': 'application/xhtml+xml', 'cset': 'utf-8', 'missing': false, 'csens': false, 'child_cnt': 0, 'issue_cnt': [ 1, 0, 1, 2, 0 ], 'sig': 0x31c94bb1 },
+  { 'dupe': false, 'type': 64, 'name': 'iban=1', 'dir': 'c1', 'linked': 5, 'url': 'http://localhost:3000/user/transfer/confirm DATA:_csrf=&iban=1&money=1', 'fetched': true, 'code': 200, 'len': 1875, 'decl_mime': 'text/html', 'sniff_mime': 'application/xhtml+xml', 'cset': 'utf-8', 'missing': false, 'csens': false, 'child_cnt': 0, 'issue_cnt': [ 3, 0, 1, 2, 0 ], 'sig': 0x31ccc943 },
+  { 'dupe': false, 'type': 64, 'name': 'money=1', 'dir': 'c2', 'linked': 5, 'url': 'http://localhost:3000/user/transfer/confirm DATA:_csrf=&iban=1&money=1', 'fetched': true, 'code': 200, 'len': 1875, 'decl_mime': 'text/html', 'sniff_mime': 'application/xhtml+xml', 'cset': 'utf-8', 'missing': false, 'csens': false, 'child_cnt': 0, 'issue_cnt': [ 3, 0, 1, 2, 0 ], 'sig': 0x31ccc943 }
+];

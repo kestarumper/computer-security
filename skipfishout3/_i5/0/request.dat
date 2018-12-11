@@ -1,0 +1,12 @@
+POST /register HTTP/1.1
+Host: localhost:3000
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: pierogizfarszem=s%3ArbQrd8hbzmfep-obGaAXoU738mQ3fU27.pfsiqngaH6W21HtEB6hkRmhCq5aAkMo2iG%2BnGh1i6Wg
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 64
+
+email=skipfish@example.com&password=skipfish&repassword=skipfish

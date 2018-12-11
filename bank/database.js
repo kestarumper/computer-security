@@ -25,7 +25,7 @@ function getUserTransfers(id) {
 }
 
 function createTransfer(from_id, to_id, value) {
-    return pool.query("INSERT INTO `transfer` (`id_transfer`, `id_user_from`, `id_user_to`, `value`, `datetime`, `status`) VALUES (NULL, ?, ?, ?, CURRENT_TIMESTAMP, 'pending');", [from_id, to_id, value]);
+    return pool.query("INSERT INTO `transfer` (`id_transfer`, `id_user_from`, `id_user_to`, `value`, `datetime`, `status`) VALUES (NULL, "+from_id+", "+to_id+", "+value+", CURRENT_TIMESTAMP, 'pending');");
 }
 
 function insertUser(email, name, surname, password) {

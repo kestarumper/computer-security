@@ -1,0 +1,27 @@
+HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 1721
+ETag: W/"6b9-1XSxfXLVsjt4rNd5zIOp13ISHZA"
+Date: Mon, 10 Dec 2018 11:03:25 GMT
+Connection: keep-alive
+
+<h1>Not Found</h1>
+<h2>404</h2>
+<pre>NotFoundError: Not Found
+    at /home/adrian/computer-security/bank/app.js:88:8
+    at Layer.handle [as handle_request] (/home/adrian/computer-security/bank/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:317:13)
+    at /home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:275:10)
+    at /home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:635:15
+    at next (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:174:3)
+    at router (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/home/adrian/computer-security/bank/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:317:13)
+    at /home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/adrian/computer-security/bank/node_modules/express/lib/router/index.js:275:10)
+    at SessionStrategy.strategy.pass (/home/adrian/computer-security/bank/node_modules/passport/lib/middleware/authenticate.js:338:9)</pre>
