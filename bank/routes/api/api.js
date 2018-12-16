@@ -13,10 +13,13 @@ router.use(function(req, res, next) {
 
 router.post('/login', api.requestJWTusingLocal);
 
+router.post('/transfer/new', passport.authenticate('jwt'), api.makeTransfer)
+
 router.get('/secret', passport.authenticate('jwt'), function(req, res, next) {
     res.json({
         bezpieczenstwo: 'poziom 100'
     })
 })
+
 
 module.exports = router;

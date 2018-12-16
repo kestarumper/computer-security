@@ -1,7 +1,8 @@
 const passport = require('passport')
 const JWT = require('jsonwebtoken');
+const { createTransfer } = require('../database')
 
-const JWT_SECRET = "adasamoloty"
+const JWT_SECRET = process.env.JWT_SECRET;
 const JWT_OPTIONS = {
     issuer: process.env.JWT_ISSUER,
     audience: process.env.JWT_AUDIENCE,
@@ -21,6 +22,16 @@ function generateJWTfromPayload(payload) {
     })
 }
 
+async function makeTransfer(req, res, next) {
+    const {id, iban, money} = req.body
+    const response = await createTransfer(id, iban, money).catch(err => err);
+    if(response.errno) {
+        res.sendStatus(500)
+    } else {
+        res.sendStatus(200)
+    }
+}
+
 function requestJWTusingLocal(req, res, next) {
     passport.authenticate('local', async function(err, user, info) {
         if(err) { return next(err); }
@@ -31,5 +42,6 @@ function requestJWTusingLocal(req, res, next) {
 }
 
 module.exports = {
-    requestJWTusingLocal
+    requestJWTusingLocal,
+    makeTransfer
 }
